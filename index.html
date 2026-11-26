@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <!-- Hace que en el celular el juego ocupe la pantalla sin zoom -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Mi Primer Juego</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #0f1720;
+      overflow: hidden;
+      /* Evita que la página se mueva o haga zoom al tocar la pantalla */
+      touch-action: none;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    #juego { width: 100%; height: 100%; }
+  </style>
+</head>
+<body>
+  <div id="juego"></div>
+
+  <!-- Phaser: la librería que dibuja, mueve cosas y detecta choques -->
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+
+  <!-- Nuestro código. El orden importa: primero lo que otros archivos usan. -->
+  <script src="src/ajustes.js"></script>
+  <script src="src/texturas.js"></script>
+  <script src="src/joystick.js"></script>
+  <script src="src/escenaJuego.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
